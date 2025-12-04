@@ -66,7 +66,7 @@ const StatsSection = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold text-[#0B0B0C] leading-tight"
+            className="text-4xl md:text-5xl font-semibold text-[#0B0B0C] leading-tight"
           >
             Making Your Shifting<br />
             <span className="text-[#0A66A3]">Safer, Faster & Stress-Free</span>
