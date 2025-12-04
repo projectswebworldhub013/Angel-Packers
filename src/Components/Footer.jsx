@@ -23,11 +23,12 @@ import {
   FaDolly,
   FaCodeBranch,
 } from "react-icons/fa";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import bgImg from "../assets/images/bg.jpg"; // background image import
+// import bgImg from "../assets/images/bg.jpg";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
 
@@ -36,7 +37,7 @@ const containerVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-// Updated Services Data
+// Services List
 const servicesData = [
   { name: "Packers And Movers Service", path: "/services/packers-and-movers", icon: FaPeopleCarry },
   { name: "Movers And Packers Service", path: "/services/movers-and-packers", icon: FaTruckMoving },
@@ -66,41 +67,41 @@ export default function Footer() {
       variants={containerVariants}
       initial="hidden"
       animate={controls}
-      className="relative text-gray-900 pt-20 pb-10 px-6 md:px-16 overflow-hidden font-sans font-semibold"
+      className="relative text-[#0B0B0C] bg-white pt-20 pb-10 px-6 md:px-16 overflow-hidden font-sans font-semibold"
       style={{
-        backgroundImage: `url(${bgImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Grid Content */}
+      {/* Grid */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-sm">
-        {/* About */}
+
+        {/* -------- ABOUT -------- */}
         <div className="flex flex-col space-y-3">
-          <h4 className="font-bold mb-2 text-3xl text-[#8B0000] font-[italiana]">
-            About Avadh Packers & Movers
+          <h4 className="font-bold mb-2 text-3xl text-[#0A66A3] font-[italiana]">
+            About Angel Packers & Movers
           </h4>
-          <p className="leading-relaxed text-gray-900">
-            Avadh Packers & Movers is your trusted relocation partner across
-            India. We specialize in safe, reliable, and affordable shifting
-            services for homes, offices, and vehicles. With skilled staff,
-            modern tools, and a commitment to excellence, we make every move
-            smooth, secure, and stress-free.
+          <p className="leading-relaxed text-[#0B0B0C]">
+            Angel Packers & Movers is one of India’s most trusted relocation brands, 
+            offering safe, reliable and professional packing and moving solutions. 
+            With expert handling, quality packaging, and timely delivery, we ensure 
+            a smooth and stress-free moving experience for families and businesses.
           </p>
-          <div className="mt-4 space-y-1 text-gray-900 text-xs">
-            <p>GSTIN: 09ABBCA4366J1ZH</p>
+
+          <div className="mt-4 space-y-1 text-[#0B0B0C] text-xs">
             <p>ISO Certified Company</p>
-            <p>Regd. Packers & Movers Association of India</p>
+            <p>Govt. Registered Packers & Movers</p>
+            <p>Professional & Experienced Team</p>
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* -------- QUICK LINKS -------- */}
         <div>
-          <h4 className="font-bold text-2xl mb-4 text-[#8B0000] font-[italiana]">
+          <h4 className="font-bold text-2xl mb-4 text-[#0A66A3] font-[italiana]">
             Quick Links
           </h4>
-          <ul className="space-y-2 text-gray-900">
+          <ul className="space-y-2 text-[#0B0B0C]">
             {[
               ["Home", "/", <FaHome />],
               ["About Us", "/about", <FaInfoCircle />],
@@ -113,7 +114,7 @@ export default function Footer() {
               <li key={i}>
                 <Link
                   to={link}
-                  className="flex items-center gap-2 hover:text-[#8B0000] transition duration-300"
+                  className="flex items-center gap-2 hover:text-[#0A66A3] transition duration-300"
                 >
                   {icon} {text}
                 </Link>
@@ -121,66 +122,66 @@ export default function Footer() {
             ))}
           </ul>
 
-          <h4 className="mt-6 font-bold text-2xl text-[#8B0000] font-[italiana]">
+          {/* Email */}
+          <h4 className="mt-6 font-bold text-2xl text-[#0A66A3] font-[italiana]">
             Email
           </h4>
-          <ul className="mt-2 space-y-2 text-gray-900">
+          <ul className="mt-2 space-y-2 text-[#0B0B0C] text-sm">
             <li>
               <a
-                href="mailto:Info@avadhpackersandmovers.co.in"
-                className="flex items-center space-x-2 hover:text-[#8B0000] transition duration-300"
+                href="mailto:info@angelpackersandmovers.co.in"
+                className="flex items-center space-x-2 hover:text-[#0A66A3] transition duration-300"
               >
-                <FaEnvelope className="text-[#8B0000]" />
-                <span>Info@avadhpackersandmovers.co.in</span>
+                <FaEnvelope className="text-[#0A66A3]" />
+                <span>info@angelpackersandmovers.co.in</span>
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Our Services */}
+        {/* -------- SERVICES -------- */}
         <div>
-          <h4 className="font-bold text-2xl mb-4 text-[#8B0000] font-[italiana]">
+          <h4 className="font-bold text-2xl mb-4 text-[#0A66A3] font-[italiana]">
             Our Services
           </h4>
-          <ul className="space-y-2 text-gray-900">
+
+          <ul className="space-y-2 text-[#0B0B0C]">
             {servicesData.map(({ name, path, icon: Icon }, i) => (
               <li key={i}>
                 <Link
                   to={path}
-                  className="hover:text-[#8B0000] transition duration-300 flex items-center gap-2"
+                  className="hover:text-[#0A66A3] transition duration-300 flex items-center gap-2"
                 >
-                  <Icon className="text-[#8B0000]" /> {name}
+                  <Icon className="text-[#0A66A3]" /> {name}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Address & Contact */}
+        {/* -------- CONTACT -------- */}
         <div>
-          <h4 className="font-bold text-2xl mb-4 text-[#8B0000] font-[italiana]">
+          <h4 className="font-bold text-2xl mb-4 text-[#0A66A3] font-[italiana]">
             Contact Info
           </h4>
-          <address className="not-italic leading-relaxed mb-4 text-gray-900">
-            <strong>Head Office:</strong>  
-            Avadh Packers & Movers, Near Highway Plaza,  
-            Ring Road, Lucknow, Uttar Pradesh, 226001  
-            <br />
-            <strong>Branch Office:</strong> Available in major cities across India.
+
+          <address className="not-italic leading-relaxed mb-4 text-[#0B0B0C] text-sm">
+            <strong>Head Office:</strong><br />
+            Plot No. 92, Ground Floor, Gali No. 7,  
+            Rambag Colony, Ramghat Road,  
+            Nearby Quarsi Chouraha,  
+            Aligarh, Uttar Pradesh – 202001, India
           </address>
-          <p className="text-sm text-gray-900 mb-2">
-            <FaPhoneAlt className="inline mr-2 text-[#8B0000]" /> +91 97177 29473
+
+          <p className="text-sm text-[#0B0B0C] mb-2">
+            <FaPhoneAlt className="inline mr-2 text-[#0A66A3]" /> +91 80068 85800
           </p>
-          <p className="text-sm text-gray-900 mb-2">
-            <FaPhoneAlt className="inline mr-2 text-[#8B0000]" /> +91 96252 41524
-          </p>
-          <p className="text-sm text-gray-900 mb-2">
-            <FaPhoneAlt className="inline mr-2 text-[#8B0000]" /> +91 95609 92657
-          </p>
+
           <div className="mb-4 flex">
             <Translator />
             <div className="w-42 md:w-16"></div>
           </div>
+
           <div className="mt-6 flex space-x-4">
             {[FaInstagram, FaFacebookF, FaYoutube, FaTwitter, FaLinkedinIn, FaPinterestP, FaSearchLocation].map(
               (Icon, idx) => (
@@ -189,7 +190,7 @@ export default function Footer() {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#8B0000] hover:text-gray-800 transition"
+                  className="text-[#0A66A3] hover:text-[#0B0B0C] transition"
                 >
                   <Icon size={20} />
                 </a>
@@ -200,10 +201,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="mt-10 text-center text-xs text-gray-900 border-t border-gray-600 pt-6 space-y-2 relative z-10">
+      <div className="mt-10 text-center text-xs text-[#0B0B0C] border-t border-[#BFC4C8] pt-6 space-y-2 relative z-10">
         <VisitorCounter />
         <p>
-          © {new Date().getFullYear()} Avadh Packers and Movers. All rights reserved.
+          © {new Date().getFullYear()} Angel Packers and Movers. All rights reserved.
         </p>
         <p>
           Designed by{" "}
@@ -211,7 +212,7 @@ export default function Footer() {
             href="https://webworldhub.co.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold hover:text-[#8B0000] transition"
+            className="font-semibold hover:text-[#0A66A3] transition"
           >
             Web World Hub
           </a>
