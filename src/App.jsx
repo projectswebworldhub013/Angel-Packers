@@ -4,6 +4,9 @@ import ScrollToTop from "./Components/ScrollToTop"
 import FloatingButtons from "./Components/FloatingButtons"
 import ModernNavbar from "./Components/Navbar"
 import Footer from "./Components/Footer"
+import About from "./Pages/About"
+import ContactPage from "./Pages/ContactPage"
+import Gallery from "./Pages/Gallery"
 
 function App() {
 
@@ -13,6 +16,9 @@ function App() {
     <ModernNavbar/>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<ContactPage/>}/>
+      <Route path="/gallery" element={<Gallery/>}/>
     </Routes>
     <Footer/>
     <FloatingButtons/>

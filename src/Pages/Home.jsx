@@ -4,6 +4,8 @@ import AboutSection from '../Components/AboutSection'
 import HowItWorks from '../Components/HowItWorks'
 import StatsSection from '../Components/StatsSection'
 import RateChart from '../Components/RateChart'
+import Testimonials from '../Components/Testimonials'
+import WhoWeAre from '../Components/WhoWeAre'
 
 const Home = () => {
   return (
@@ -11,8 +13,10 @@ const Home = () => {
       <HeroSlider/>
       <AboutSection/>
       <HowItWorks/>
+      <WhoWeAre/>
       <StatsSection/>
       <RateChart/>
+      <Testimonials/>
     </div>
   )
 }
