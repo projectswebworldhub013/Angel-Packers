@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaTruckMoving, FaBoxes, FaSmile } from "react-icons/fa";
-import aboutImg from "../assets/images/hero/h1.jpg"; 
+import aboutImg from "../assets/images/bg5.avif"; 
 import { Link } from "react-router-dom";
 
 export default function AboutSection() {

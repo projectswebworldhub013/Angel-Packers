@@ -7,6 +7,8 @@ import Footer from "./Components/Footer"
 import About from "./Pages/About"
 import ContactPage from "./Pages/ContactPage"
 import Gallery from "./Pages/Gallery"
+import SingleService from "./Pages/SIngleService"
+import Services from "./Pages/Services"
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<ContactPage/>}/>
       <Route path="/gallery" element={<Gallery/>}/>
+      <Route path="/services" element={<Services/>}/>
+      <Route path="/services/:serviceId" element={<SingleService />} />
     </Routes>
     <Footer/>
     <FloatingButtons/>

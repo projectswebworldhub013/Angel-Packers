@@ -11,37 +11,37 @@ import img5 from "../assets/images/hero/h2.jpg";
 
 import logo from "../assets/images/logo.png";
 
-// UPDATED SLIDES FOR ANGEL PACKERS AND MOVERS
+// UPDATED SLIDES WITH LONGER SUBHEADINGS
 const slides = [
   {
     image: img1,
     title: ["RELOCATION MADE EASY"],
     description:
-      "From packing to delivery, Angel Packers & Movers ensures a smooth and stress-free moving experience with complete professionalism and care.",
+      "Angel Packers & Movers provides a smooth relocation experience with expert packing, safe loading, GPS-enabled transport, and professional handling at every step. Enjoy stress-free shifting with a team that truly understands your moving needs.",
   },
   {
     image: img2,
     title: ["SAFE & SECURE PACKING"],
     description:
-      "Your belongings are handled with industry-grade packing materials and expert techniques to ensure total safety throughout the journey.",
+      "We use premium-grade packing materials, multi-layer protection, and trained manpower to safeguard your valuables. Every item is packed with extra care to prevent scratches, dents, or damage during transportation.",
   },
   {
     image: img3,
     title: ["HOUSEHOLD SHIFTING EXPERTS"],
     description:
-      "We specialize in doorstep-to-doorstep residential shifting with precision, careful handling, and timely delivery.",
+      "From local home shifting to complete interstate relocation, our team ensures safe handling of furniture, appliances, fragile items, and personal belongings with absolute precision and timely delivery.",
   },
   {
     image: img4,
     title: ["OFFICE & COMMERCIAL MOVING"],
     description:
-      "Angel Packers & Movers executes corporate relocations with efficiency, ensuring minimal downtime and maximum safety.",
+      "We manage corporate relocations with efficiency and zero downtime. Our services include IT equipment shifting, file/document relocation, workstation transport, and complete setup assistance at the new location.",
   },
   {
     image: img5,
     title: ["LONG DISTANCE TRANSPORTATION"],
     description:
-      "With strong logistics, trained teams, and secure transport, we ensure a smooth moving experience across cities and states.",
+      "With strong logistics strength, well-maintained vehicles, and skilled drivers, we ensure safe and seamless long-distance relocation across all major cities, towns, and states in India.",
   },
 ];
 
@@ -61,19 +61,26 @@ export default function HeroSlider() {
     <div className="relative w-full h-[90vh] overflow-hidden bg-black">
 
       {/* TOP LEFT BRAND LABEL */}
-      <div className="absolute top-6 left-6 z-[40] flex items-center gap-3">
-        <img src={logo} alt="Angel Packers Logo" className="w-10 h-10 object-contain" />
-        <p className="text-sm tracking-wide text-white" style={{ fontFamily: "Italiana, serif" }}>
-          ANGEL PACKERS & MOVERS
+      <div className="hidden md:flex absolute -top-3 left-20 z-[40] flex items-center gap-3">
+        <img
+          src={logo}
+          alt="Angel Packers Logo"
+          className=" w-44 h-44 object-contain drop-shadow-xl" // ⬅ Increased size
+        />
+        <p
+          className="text-sm md:text-base tracking-wide text-white"
+          style={{ fontFamily: "Italiana, serif" }}
+        >
+          {/* ANGEL PACKERS & MOVERS */}
         </p>
       </div>
 
       {/* TOP RIGHT STATEMENT */}
       <div className="absolute top-6 right-6 z-[40] flex items-center gap-2 text-white text-xs md:text-sm">
         <FaRegStar className="text-[#0A66A3]" />
-        <p className="max-w-xs">
-          Trusted relocation solutions with{" "}
-          <span className="text-[#0A66A3] font-semibold"> safety, reliability, and care.</span>
+        <p className="max-w-xs md:max-w-sm">
+          Trusted relocation services with{" "}
+          <span className="text-[#0A66A3] font-semibold">safety, reliability, and expert handling.</span>
         </p>
       </div>
 
@@ -105,22 +112,27 @@ export default function HeroSlider() {
         >
           <div className="max-w-3xl">
 
+            {/* HEADING */}
             <h1
-              className="text-white text-5xl md:text-6xl font-light leading-tight"
+              className="text-white text-4xl md:text-6xl font-light leading-tight"
               style={{ fontFamily: "Italiana, serif" }}
             >
               {current.title.map((line, i) => (
-                <span key={i} className="block text-white">{line}</span>
+                <span key={i} className="block text-white">
+                  {line}
+                </span>
               ))}
             </h1>
 
-            <p className="text-gray-200 mt-4 max-w-xl text-sm md:text-base line-clamp-2">
+            {/* RICH SUBHEADING TEXT */}
+            <p className="text-gray-200 mt-5 max-w-2xl text-base md:text-lg leading-relaxed"> 
               {current.description}
             </p>
 
-            <div className="mt-6">
+            {/* BUTTON */}
+            <div className="mt-7">
               <Link to="/contact">
-                <button className="border border-[#0A66A3] text-white px-6 py-2 text-sm tracking-wide hover:bg-[#0A66A3] transition-all duration-300">
+                <button className="cursor-pointer border border-[#0A66A3] bg-white text-black px-7 py-3 text-sm md:text-base tracking-wide hover:bg-[#0A66A3] transition-all duration-300 shadow rounded-full">
                   GET A QUOTE →
                 </button>
               </Link>
