@@ -22,6 +22,11 @@ import {
   FaDog,
   FaDolly,
   FaCodeBranch,
+  FaBuilding,
+  FaWarehouse,
+  FaFileInvoice,
+  FaDoorOpen,
+  FaGlobeAmericas,
 } from "react-icons/fa";
 
 import { motion, useAnimation } from "framer-motion";
@@ -39,19 +44,17 @@ const containerVariants = {
 
 // Services List
 const servicesData = [
-  { name: "Packers And Movers Service", path: "/services/packers-and-movers", icon: FaPeopleCarry },
-  { name: "Movers And Packers Service", path: "/services/movers-and-packers", icon: FaTruckMoving },
-  { name: "Relocation Service", path: "/services/relocation", icon: FaExchangeAlt },
-  { name: "Household Shifting Service", path: "/services/household-shifting", icon: FaBoxOpen },
-  { name: "Shifting Service", path: "/services/shifting", icon: FaPeopleCarry },
-  { name: "Transport Service", path: "/services/transport", icon: FaTruckMoving },
-  { name: "Car Transport Service", path: "/services/car-transport", icon: FaCarSide },
-  { name: "Bike Transport Service", path: "/services/bike-transport", icon: FaMotorcycle },
-  { name: "Pet Transport Service", path: "/services/pet-transport", icon: FaDog },
-  { name: "Loading Unloading Service", path: "/services/loading-unloading", icon: FaDolly },
-  { name: "Packing Unpacking Service", path: "/services/packing-unpacking", icon: FaBoxOpen },
-  { name: "Packaging Unpackaging Service", path: "/services/packaging-unpackaging", icon: FaBoxOpen },
+  { name: "Household Shifting All India", path: "/services/household-shifting", icon: FaTruckMoving },
+  { name: "Office Shifting All India", path: "/services/office-shifting", icon: FaBuilding },
+  { name: "Car-Bike-Vehicle Moving", path: "/services/vehicle-moving", icon: FaMotorcycle },
+  { name: "Loading & Unloading", path: "/services/loading-unloading", icon: FaDolly },
+  { name: "Packing & Unpacking", path: "/services/packing-unpacking", icon: FaBoxOpen },
+  { name: "Warehouse Services", path: "/services/warehouse-services", icon: FaWarehouse },
+  { name: "GST Billing", path: "/services/gst-billing", icon: FaFileInvoice },
+  { name: "Door To Door Services", path: "/services/door-to-door", icon: FaDoorOpen },
+  { name: "International Relocation Services", path: "/services/international-relocation", icon: FaGlobeAmericas },
 ];
+
 
 export default function Footer() {
   const controls = useAnimation();
@@ -106,7 +109,6 @@ export default function Footer() {
               ["Home", "/", <FaHome />],
               ["About Us", "/about", <FaInfoCircle />],
               ["Services", "/services", <FaTruckMoving />],
-              ["Branches", "/locations", <FaCodeBranch />],
               ["Gallery", "/gallery", <FaImage />],
               ["Certificates", "/certificates", <FaCertificate />],
               ["Contact Us", "/contact", <FaPhoneAlt />],
@@ -147,15 +149,16 @@ export default function Footer() {
 
           <ul className="space-y-2 text-[#0B0B0C]">
             {servicesData.map(({ name, path, icon: Icon }, i) => (
-              <li key={i}>
-                <Link
-                  to={path}
-                  className="hover:text-[#0A66A3] transition duration-300 flex items-center gap-2"
-                >
-                  <Icon className="text-[#0A66A3]" /> {name}
-                </Link>
-              </li>
-            ))}
+  <li key={i}>
+    <Link
+      to={path}
+      className="hover:text-[#0A66A3] transition duration-300 flex items-center gap-2"
+    >
+      <Icon className="text-[#0A66A3]" /> {name}
+    </Link>
+  </li>
+))}
+
           </ul>
         </div>
 

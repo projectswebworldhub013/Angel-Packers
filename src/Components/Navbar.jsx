@@ -28,7 +28,6 @@ const navItems = [
   { name: "Home", path: "/", icon: <FaHome className="inline mr-2" /> },
   { name: "About Us", path: "/about", icon: <FaInfoCircle className="inline mr-2" /> },
   { name: "Services", path: "/services", icon: <FaTruckMoving className="inline mr-2" /> },
-  { name: "Branches", path: "/locations", icon: <FaCodeBranch className="inline mr-2" /> },
   { name: "Gallery", path: "/gallery", icon: <FaImages className="inline mr-2" /> },
   { name: "Contact Us", path: "/contact", icon: <FaPhoneAlt className="inline mr-2" /> },
 ];
@@ -120,7 +119,7 @@ const ModernNavbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="w-full px-4 md:px-12 py-5 bg-white shadow-md relative z-50">
+      <nav className="w-full px-4 md:px-12 py-2 bg-white shadow-md relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
 
           {/* Logo */}
@@ -128,7 +127,7 @@ const ModernNavbar = () => {
             <img
               src={logo}
               alt="Angel Packers and Movers"
-              className="h-10 md:h-12 object-contain"
+              className="h-16 md:h-18 object-contain"
             />
           </Link>
 
@@ -184,7 +183,7 @@ const ModernNavbar = () => {
               >
                 {/* Panel Header */}
                 <div className="flex justify-between items-center mb-4">
-                  <img src={logo} alt="Angel" className="h-8 sm:h-10" />
+                  <img src={logo} alt="Angel" className="h-14 sm:h-10" />
                   <FaTimes
                     className="text-2xl text-black cursor-pointer"
                     onClick={toggleMenu}

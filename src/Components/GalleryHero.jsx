@@ -60,14 +60,14 @@ export default function GalleryHero() {
         {/* Buttons */}
         <div className="flex flex-wrap gap-3 sm:gap-4">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              to="/gallery"
+            <a
+              href="#gallery"
               className="inline-block px-6 py-3 rounded-lg font-semibold text-white
               bg-gradient-to-r from-[#0A66A3] to-[#084F7C] shadow-lg hover:shadow-xl
               transition text-sm sm:text-base"
             >
               View Full Gallery
-            </Link>
+            </a>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
