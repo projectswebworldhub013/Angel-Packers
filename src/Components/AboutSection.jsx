@@ -37,13 +37,15 @@ export default function AboutSection() {
           </p>
 
           {/* CTA Button */}
+          <Link to='/services'>
           <motion.button
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 bg-[#0A66A3] hover:bg-[#074E7A] text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300"
+            className="cursor-pointer mt-6 bg-[#0A66A3] hover:bg-[#074E7A] text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300"
           >
-            Get a Free Quote
+            Explore Services
           </motion.button>
+          </Link>
 
           {/* Stats */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">

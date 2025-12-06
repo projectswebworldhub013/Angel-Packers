@@ -103,7 +103,7 @@ const HowItWorks = () => {
             <div className="absolute left-1/2 -translate-x-1/2 bottom-4 w-full px-4">
               <div className="opacity-0 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                 <Link to={"/about"}>
-                  <button className="w-full rounded-xl bg-[#0A66A3] group-hover:bg-white group-hover:text-[#0A66A3] text-white text-sm py-2 font-semibold shadow-md transition">
+                  <button className="cursor-pointer w-full rounded-xl bg-[#0A66A3] group-hover:bg-white group-hover:text-[#0A66A3] text-white text-sm py-2 font-semibold shadow-md transition">
                     Learn More
                   </button>
                 </Link>

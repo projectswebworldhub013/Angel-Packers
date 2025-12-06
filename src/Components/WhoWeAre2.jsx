@@ -82,7 +82,7 @@ export default function WhoWeAre2() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#0A66A3] text-white px-6 py-3 rounded-lg font-semibold 
+              className="cursor-pointer bg-[#0A66A3] text-white px-6 py-3 rounded-lg font-semibold 
               shadow-md hover:bg-[#084F7C] transition-all duration-300 text-sm sm:text-base"
             >
               Get Free Quote

@@ -136,6 +136,7 @@ export default function Footer() {
               >
                 <FaEnvelope className="text-[#0A66A3]" />
                 <span>info@angelpackersandmovers.co.in</span>
+                <span>angelpackersandmovers304@gmail.com</span>
               </a>
             </li>
           </ul>

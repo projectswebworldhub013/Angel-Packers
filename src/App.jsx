@@ -9,6 +9,7 @@ import ContactPage from "./Pages/ContactPage"
 import Gallery from "./Pages/Gallery"
 import SingleService from "./Pages/SIngleService"
 import Services from "./Pages/Services"
+import Certificates from "./Pages/CertificatesPage"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Route path="/contact" element={<ContactPage/>}/>
       <Route path="/gallery" element={<Gallery/>}/>
       <Route path="/services" element={<Services/>}/>
+      <Route path="/certificates" element={<Certificates/>}/>
       <Route path="/services/:serviceId" element={<SingleService />} />
     </Routes>
     <Footer/>

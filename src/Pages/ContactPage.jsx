@@ -56,6 +56,7 @@ const ContactPage = () => {
                 <div>
                   <h4 className="font-bold text-[#0A66A3]">Email</h4>
                   <p>info@angelpackersandmovers.co.in</p>
+                  <p>angelpackersandmovers304@gmail.com</p>
                 </div>
 
                 {/* Address */}
